@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/btarcahn/shadow-leap.svg?branch=master)](https://travis-ci.org/btarcahn/shadow-leap) <br/>
 # Project information
  This project is an assignment of the following subject: <br/>
  Subject: SWEN20003 Object-oriented Software Development <br/>
