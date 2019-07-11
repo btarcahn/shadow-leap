@@ -1,6 +1,8 @@
-import java.util.ArrayList;
+package io.github.btarcahn.shadowLeap;
 
 import org.newdawn.slick.Input;
+
+import java.util.ArrayList;
 
 /**A Sprite that able to move (change their x, y positions) in the World.
  * There are two approaches for movements: moving by keyboard (userinput), and moving automatically (with a given speed and direction).

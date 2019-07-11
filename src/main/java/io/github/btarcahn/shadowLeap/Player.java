@@ -1,6 +1,8 @@
-import java.util.ArrayList;
+package io.github.btarcahn.shadowLeap;
 
 import org.newdawn.slick.Input;
+
+import java.util.ArrayList;
 
 
 /**The Player class is the main character of the game. 

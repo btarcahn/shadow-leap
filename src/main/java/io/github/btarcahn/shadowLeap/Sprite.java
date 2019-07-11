@@ -1,11 +1,12 @@
-import utilities.BoundingBox;
+package io.github.btarcahn.shadowLeap;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
+import io.github.btarcahn.shadowLeap.utilities.BoundingBox;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.Input;
 import org.newdawn.slick.SlickException;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 
 /** The most basic element in the World. This is generally the unit in charge of movements & collisions.

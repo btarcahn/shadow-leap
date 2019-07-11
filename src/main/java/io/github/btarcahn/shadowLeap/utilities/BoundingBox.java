@@ -2,7 +2,7 @@
  * BoundingBox complete class for SWEN20003: Object Oriented Software Development 2018
  * by Eleanor McMurtry, University of Melbourne
  */
-package utilities;
+package io.github.btarcahn.shadowLeap.utilities;
 
 import org.newdawn.slick.Image;
 

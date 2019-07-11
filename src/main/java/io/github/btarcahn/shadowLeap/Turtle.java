@@ -1,8 +1,11 @@
+package io.github.btarcahn.shadowLeap;
+
+import io.github.btarcahn.shadowLeap.Disappearable;
+import io.github.btarcahn.shadowLeap.RidingVehicle;
+import org.newdawn.slick.Input;
+
 import java.util.ArrayList;
 import java.util.Arrays;
-
-
-import org.newdawn.slick.Input;
 
 
 /**Turtle class. A special thing about the Turtle is that it disappears/reappears every 20 seconds.
@@ -11,7 +14,7 @@ import org.newdawn.slick.Input;
  * @since 12 October, 2018
  * @see RidingVehicle
  */
-public class Turtle extends RidingVehicle implements Disappearable{
+public class Turtle extends RidingVehicle implements Disappearable {
 	
 	/**Directory to the image file of a turtle*/
 	public static final String TURTLE_ASSET = "assets/turtles.png";

@@ -1,9 +1,11 @@
-import java.util.ArrayList;
-import java.io.FileReader;
-import java.io.BufferedReader;
+package io.github.btarcahn.shadowLeap;
 
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Input;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.ArrayList;
 
 
 /** The World contains all Sprites and their movements in the Game.

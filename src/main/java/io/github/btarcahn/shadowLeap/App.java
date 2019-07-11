@@ -1,3 +1,5 @@
+package io.github.btarcahn.shadowLeap;
+
 /**
  * 
  * Code developed by Bach Tran (b.tran17@student.unimelb.edu.au)
@@ -7,15 +9,9 @@
  */
 
 
+import org.newdawn.slick.*;
 
 import java.io.File;
-
-import org.newdawn.slick.AppGameContainer;
-import org.newdawn.slick.BasicGame;
-import org.newdawn.slick.GameContainer;
-import org.newdawn.slick.Graphics;
-import org.newdawn.slick.SlickException;
-import org.newdawn.slick.Input;
 
 /**
  * Main class for the game.

@@ -1,3 +1,6 @@
+package io.github.btarcahn.shadowLeap;
+
+import io.github.btarcahn.shadowLeap.MovingSprite;
 
 /**Interface class that grants a MovingSprite the ability to push other MovingSprite.
  * @author Tran

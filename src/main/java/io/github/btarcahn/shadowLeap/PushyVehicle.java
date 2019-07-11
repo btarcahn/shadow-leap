@@ -1,3 +1,10 @@
+package io.github.btarcahn.shadowLeap;
+
+import io.github.btarcahn.shadowLeap.MovingSprite;
+import io.github.btarcahn.shadowLeap.Player;
+import io.github.btarcahn.shadowLeap.Pushable;
+import io.github.btarcahn.shadowLeap.Sprite;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 

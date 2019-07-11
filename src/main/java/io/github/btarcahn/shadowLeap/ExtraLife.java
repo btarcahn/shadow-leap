@@ -1,7 +1,10 @@
+package io.github.btarcahn.shadowLeap;
+
+import io.github.btarcahn.shadowLeap.Disappearable;
+import org.newdawn.slick.Input;
+
 import java.util.ArrayList;
 import java.util.Random;
-
-import org.newdawn.slick.Input;
 
 
 /** ExtraLife object
