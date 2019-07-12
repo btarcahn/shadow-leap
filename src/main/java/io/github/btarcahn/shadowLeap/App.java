@@ -37,8 +37,7 @@ public class App extends BasicGame {
     
     
     @Override
-    public void init(GameContainer gc)
-            throws SlickException {
+    public void init(GameContainer gc) {
         world = new World("assets/levels/" + levels[currentLevel]);
     }
 
@@ -67,8 +66,7 @@ public class App extends BasicGame {
      * @param gc The Slick game container object.
      * @param g The Slick graphics object, used for drawing.
      */
-    public void render(GameContainer gc, Graphics g)
-            throws SlickException {
+    public void render(GameContainer gc, Graphics g) {
         world.render(g);
     }
 

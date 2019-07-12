@@ -8,8 +8,10 @@ import java.io.FileReader;
 import java.util.ArrayList;
 
 
-/** The World contains all Sprites and their movements in the Game.
- * The World can takes a *.lvl file as direction and construct all Sprites based on that direction.
+/**
+ * Encapsulates all Sprites and their movements
+ * in the game loop.
+ * @since 1.0
  * @author Bach Tran
  * @author Elenor McMurtry
  */
