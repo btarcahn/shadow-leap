@@ -6,7 +6,15 @@ package io.github.btarcahn.shadowLeap.utils;
 
 import org.newdawn.slick.Image;
 
-public class BoundingBox {
+/**
+ * A rectangular object acts as hidden
+ * boundaries of a Sprite. This is
+ * utilized to check of Sprite interactions.
+ * @since 1.0
+ * @aurhor Elanor McMurtry
+ * @see Sprite
+ */
+public class BoundingBox implements Interactable {
 	private static final float FUZZ = 0.95f;
 	
 	private float left;
@@ -69,8 +77,15 @@ public class BoundingBox {
 	public float getHeight() {
 		return height;
 	}
-	
-	public boolean intersects(BoundingBox other) {
+
+	@Override
+	public boolean interacts(Interactable o) {
+
+		if (this.getClass() != o.getClass()) {
+			return false;
+		}
+
+		BoundingBox other = (BoundingBox) o;
 		return !(other.left > getRight()
 			  || other.getRight()  < left
 			  || other.top > getBottom()

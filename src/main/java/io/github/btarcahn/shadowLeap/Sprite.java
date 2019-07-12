@@ -9,10 +9,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 
-/** The most basic element in the World. This is generally the unit in charge of movements & collisions.
+/**
+ * The most basic element in the World.
+ * This is generally the unit in charge
+ * of movements & collisions.
  * @author Bach Tran
  * @author Elanor McMurtry
- *
+ * @deprecated extensive refactoring in progress.
  */
 public abstract class Sprite {
 	/** The string "hazard", to prevent typos. This signifies a hazard Sprite that kills Player immediately in-contact.*/
@@ -71,7 +74,7 @@ public abstract class Sprite {
 		this.x = x;
 		this.y = y;
 		
-		bounds = new BoundingBox(image, (int)x, (int)y);
+		bounds = new BoundingBox(image, x, y);
 	}
 
 	/**
