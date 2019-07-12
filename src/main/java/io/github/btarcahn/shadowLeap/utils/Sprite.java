@@ -60,6 +60,14 @@ public class Sprite
         box.setY(y);
     }
 
+    public float width() {
+        return image.getWidth();
+    }
+
+    public float height() {
+        return image.getHeight();
+    }
+
     /**
      * Draws the Sprites to the game screen.
      * Uses its (x, y) coordinates as the central

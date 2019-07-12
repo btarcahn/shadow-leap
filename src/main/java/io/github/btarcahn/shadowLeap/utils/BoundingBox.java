@@ -15,7 +15,7 @@ import org.newdawn.slick.Image;
  * @see Sprite
  */
 public class BoundingBox implements Interactable {
-	private static final float FUZZ = 0.95f;
+	private static final float FUZZ = 0.8f;
 	
 	private float left;
 	private float top;

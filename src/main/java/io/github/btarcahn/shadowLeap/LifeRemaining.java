@@ -1,7 +1,5 @@
 package io.github.btarcahn.shadowLeap;
 
-import io.github.btarcahn.shadowLeap.Sprite;
-
 import java.util.ArrayList;
 
 /** Signifies how many lives player have left
