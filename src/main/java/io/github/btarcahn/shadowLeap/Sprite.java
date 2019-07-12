@@ -158,7 +158,7 @@ public abstract class Sprite {
 	 * @return true if the two Sprites are in collision.
 	 */
 	public final boolean collides(Sprite other) {
-		return bounds.intersects(other.bounds) && !this.hasTag(DISAPPEAR) && !other.hasTag(DISAPPEAR);
+		return bounds.interacts(other.bounds) && !this.hasTag(DISAPPEAR) && !other.hasTag(DISAPPEAR);
 	}
 	
 	/** Actions to be taken if this Sprite collides with other Sprite.

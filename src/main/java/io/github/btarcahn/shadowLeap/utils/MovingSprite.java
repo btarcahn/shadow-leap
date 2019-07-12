@@ -23,4 +23,16 @@ public class MovingSprite extends Sprite {
         setX(x() + dx);
         setY(y() + dy);
     }
+
+    /**
+     * Updates the position of the Sprite.
+     * This performs a smooth displacement using
+     * delta.
+     * @param delta time (milliseconds) passes since
+     *              last frame.
+     * @since 2.0
+     */
+    public void update(int delta) {
+        // TODO think about this
+    }
 }
