@@ -9,6 +9,7 @@ package io.github.btarcahn.shadowLeap;
  */
 
 
+import io.github.btarcahn.shadowLeap.game.DemoWorld;
 import org.newdawn.slick.*;
 
 import java.io.File;
@@ -19,13 +20,13 @@ import java.io.File;
  */
 public class App extends BasicGame {
     /** screen width, in pixels */
-    public static final int SCREEN_WIDTH = 1024;
+    public static final int SCREEN_WIDTH = 800;
     /** screen height, in pixels */
-    public static final int SCREEN_HEIGHT = 768;
+    public static final int SCREEN_HEIGHT = 600;
     /** First, Player starts with 3 lives */
     public static final int PLAYER_LIVES = 3;
     
-    private World world;
+    private DemoWorld world;
     String[] levels = new File("assets/levels").list();
     private int currentLevel = 0;
     
@@ -38,7 +39,8 @@ public class App extends BasicGame {
     
     @Override
     public void init(GameContainer gc) {
-        world = new World("assets/levels/" + levels[currentLevel]);
+//        world = new World("assets/levels/" + levels[currentLevel]);
+        world = new DemoWorld();
     }
 
     /** Update the game state for a frame.
@@ -49,17 +51,18 @@ public class App extends BasicGame {
     public void update(GameContainer gc, int delta)
             throws SlickException {
         // Get data about the current input (keyboard state).
-        Input input = gc.getInput();
-        if (world.isNextWorld()) {
-        	if (currentLevel < levels.length - 1) {
-	        	world = new World("assets/levels/" + levels[++currentLevel]);
-	        	world.setNextWorld(false);
-        	} else {
-        		// congrats, you win
-        		System.exit(0);
-        	}
-        } 
-        world.update(input, delta);
+//        Input input = gc.getInput();
+//        if (world.isNextWorld()) {
+//        	if (currentLevel < levels.length - 1) {
+//	        	world = new World("assets/levels/" + levels[++currentLevel]);
+//	        	world.setNextWorld(false);
+//        	} else {
+//        		// congrats, you win
+//        		System.exit(0);
+//        	}
+//        }
+//        world.update(input, delta);
+        world.update(gc, delta);
     }
 
     /** Render the entire screen, so it reflects the current game state.
