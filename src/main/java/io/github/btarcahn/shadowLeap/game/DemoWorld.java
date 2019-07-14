@@ -13,20 +13,19 @@ public final class DemoWorld {
     public static final int SCREEN_HEIGHT = 600;
 
     List<Renderable> renderables = new ArrayList<>();
-
     List<Controllable> controllables = new ArrayList<>();
 
     public DemoWorld() {
-        Player player = new Player("assets/frog.png", 400, 576);
-        controllables.add(player);
+        Player player = PlayerFactory.createPlayerFactory().create();
+
         renderables.add(player);
+        controllables.add(player);
     }
 
     public void update(GameContainer gc, int delta) {
         // TODO update logic
 
         controllables.forEach(player -> player.accept(gc.getInput()));
-
     }
 
     public void render(Graphics g) {
