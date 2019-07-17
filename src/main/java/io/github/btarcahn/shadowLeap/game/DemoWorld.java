@@ -16,11 +16,11 @@ public final class DemoWorld {
     List<Controllable> controllables = new ArrayList<>();
 
     public DemoWorld() {
-        Player player = PlayerFactory.createPlayerFactory().create();
-
+        Player player = Factory.createPlayer(400, 576);
         renderables.add(player);
-        renderables.add(WaterFactory.getInstance().create(480, 480));
         controllables.add(player);
+        renderables.add(Factory.createWater(480, 480));
+
     }
 
     public void update(GameContainer gc, int delta) {
