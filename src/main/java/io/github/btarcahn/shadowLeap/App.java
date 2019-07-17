@@ -19,6 +19,9 @@ import java.io.File;
  * Handles initialisation, input and rendering.
  */
 public class App extends BasicGame {
+
+    public static final String GAME_NAME = "Shadow Leap 2.0";
+
     /** screen width, in pixels */
     public static final int SCREEN_WIDTH = 800;
     /** screen height, in pixels */
@@ -32,8 +35,8 @@ public class App extends BasicGame {
     
     /**Constructor for app
      * */
-    public App() {
-        super("Shadow Leap");
+    private App() {
+        super(GAME_NAME);
     }
     
     
@@ -65,10 +68,7 @@ public class App extends BasicGame {
         world.update(gc, delta);
     }
 
-    /** Render the entire screen, so it reflects the current game state.
-     * @param gc The Slick game container object.
-     * @param g The Slick graphics object, used for drawing.
-     */
+    @Override
     public void render(GameContainer gc, Graphics g) {
         world.render(g);
     }
