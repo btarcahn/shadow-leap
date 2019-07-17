@@ -2,6 +2,9 @@ package io.github.btarcahn.shadowLeap.utils;
 
 import org.newdawn.slick.Input;
 
+/**
+ * Sprite that can accept user inputs (keyboard, mouse).
+ */
 public class Player extends MovingSprite
         implements Controllable {
 
@@ -14,6 +17,11 @@ public class Player extends MovingSprite
      */
     public Player(String ref, float x, float y) {
         super(ref, x, y);
+    }
+
+    @Override
+    public void onBorder() {
+        // TODO player should not move off the border
     }
 
     @Override
@@ -33,5 +41,10 @@ public class Player extends MovingSprite
         if (input.isKeyPressed(Input.KEY_DOWN)) {
             displace(0, height());
         }
+    }
+
+    @Override
+    public void reaction(Interactable obj) {
+        // TODO add player reaction
     }
 }

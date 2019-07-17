@@ -11,10 +11,12 @@ import org.newdawn.slick.Image;
  * boundaries of a Sprite. This is
  * utilized to check of Sprite interactions.
  * @since 1.0
- * @aurhor Elanor McMurtry
+ * @author Elanor McMurtry
  * @see Sprite
  */
-public class BoundingBox implements Interactable {
+
+// TODO set to package-private when refactoring is completed
+public class BoundingBox {
 	private static final float FUZZ = 0.8f;
 	
 	private float left;
@@ -78,14 +80,7 @@ public class BoundingBox implements Interactable {
 		return height;
 	}
 
-	@Override
-	public boolean interacts(Interactable o) {
-
-		if (this.getClass() != o.getClass()) {
-			return false;
-		}
-
-		BoundingBox other = (BoundingBox) o;
+	public boolean interacts(BoundingBox other) {
 		return !(other.left > getRight()
 			  || other.getRight()  < left
 			  || other.top > getBottom()

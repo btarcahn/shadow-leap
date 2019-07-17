@@ -19,6 +19,7 @@ public final class DemoWorld {
         Player player = PlayerFactory.createPlayerFactory().create();
 
         renderables.add(player);
+        renderables.add(WaterFactory.getInstance().create(480, 480));
         controllables.add(player);
     }
 

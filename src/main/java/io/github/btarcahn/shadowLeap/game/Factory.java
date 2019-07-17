@@ -22,7 +22,7 @@ interface Factory<T> {
  * Interface for creating Sprites.
  * @param <T> Sprite-types.
  */
-interface SpriteFactory<T extends Sprite> extends Factory<T> {
+interface SpriteFactory<T extends Sprite> {
 
     /**
      * Creates a new Sprite object at a designated position.

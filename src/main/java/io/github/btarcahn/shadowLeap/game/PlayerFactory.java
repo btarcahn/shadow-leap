@@ -2,7 +2,8 @@ package io.github.btarcahn.shadowLeap.game;
 
 import io.github.btarcahn.shadowLeap.utils.Player;
 
-class PlayerFactory implements SpriteFactory<Player> {
+class PlayerFactory
+        implements Factory<Player>,SpriteFactory<Player> {
 
     // TODO generalize starting pos
     private static final String src = "assets/frog.png";

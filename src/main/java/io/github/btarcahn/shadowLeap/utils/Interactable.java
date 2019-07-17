@@ -16,4 +16,10 @@ public interface Interactable {
      * @return true if two object interact.
      */
     boolean interacts(Interactable o);
+
+    /**
+     * Contains the action to be done
+     * if an interaction happens.
+     */
+    void reaction(Interactable obj);
 }

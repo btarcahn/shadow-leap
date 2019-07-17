@@ -2,14 +2,24 @@ package io.github.btarcahn.shadowLeap.utils;
 
 
 /**
- * Movable Sprite.
- * Can only move UP, DOWN, LEFT, RIGHT, one at a time.
+ * Sprite that can move on the game screen.
+ * The movement is directed by a speed constant,
+ * which can be modified using a setter.
+ * MovingSprite may move in four perpendicular
+ * directions: UP, DOWN, LEFT, RIGHT.
+ * @author Bach Tran
+ * @since 2.0
  */
-public class MovingSprite extends Sprite {
+public abstract class MovingSprite extends Sprite {
 
     private float speed = 0.0f;
     private short horizontal = 0;
     private short vertical = 0;
+
+    @Override
+    public void reaction(Interactable obj) {
+        // Do nothing...
+    }
 
     public enum Directions {
         UP, DOWN, LEFT, RIGHT
@@ -64,6 +74,14 @@ public class MovingSprite extends Sprite {
         setX(x() + dx);
         setY(y() + dy);
     }
+
+    /**
+     * Actions shall be taken if the Sprite
+     * hits the border of the game screen.
+     * @since 2.0
+     * @author Bach Tran
+     */
+    public abstract void onBorder();
 
     /**
      * Updates the position of the Sprite.

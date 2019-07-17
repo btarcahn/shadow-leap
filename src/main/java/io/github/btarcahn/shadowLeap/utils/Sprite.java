@@ -4,11 +4,18 @@ import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 
 /**
- * Represents a render-able image.
+ * Abstract class on top of the hierarchy. All other Sprites
+ * shall extend this class.
+ * The abstract Sprite has a core image, which
+ * is used for rendering and calculating sizes.
+ * The (x, y) position of the Sprite lies in the
+ * center of its core image. A BoundingBox is used
+ * by this class to check for interactions.
  * @author Bach Tran
  * @since 2.0
+ * @see BoundingBox
  */
-public class Sprite
+public abstract class Sprite
         implements Renderable, Interactable {
     private BoundingBox box;
     private Image image;
@@ -50,20 +57,40 @@ public class Sprite
         return this.y;
     }
 
+    /**
+     * Modifies the horizontal position of the Sprite.
+     * @since 1.0
+     * @param x the new x-position of the Sprite.
+     */
     public void setX(float x) {
         this.x = x;
         box.setX(x);
     }
 
+    /**
+     * Modifies the vertical position of the Sprite.
+     * @since 1.0
+     * @param y the new y-position of the Sprite.
+     */
     public void setY(float y) {
         this.y = y;
         box.setY(y);
     }
 
+    /**
+     * Gets the width of the Sprite, which is the
+     * width of its core image.
+     * @return the width of the Sprite.
+     */
     public float width() {
         return image.getWidth();
     }
 
+    /**
+     * Gets the height of the Sprite, which is the
+     * height of its core image.
+     * @return the height of the Sprite.
+     */
     public float height() {
         return image.getHeight();
     }
