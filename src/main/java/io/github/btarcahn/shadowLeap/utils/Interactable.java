@@ -1,8 +1,9 @@
 package io.github.btarcahn.shadowLeap.utils;
 
 /**
- * Functional interface checks for
- * object interactions.
+ * Object implementing this funtional interface
+ * may have the ability to interact with each
+ * other.
  * @author Bach Tran
  * @since 2.0
  */
