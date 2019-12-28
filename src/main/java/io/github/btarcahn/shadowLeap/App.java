@@ -32,9 +32,7 @@ public class App extends BasicGame {
     private DemoWorld world;
     String[] levels = new File("assets/levels").list();
     private int currentLevel = 0;
-    
-    /**Constructor for app
-     * */
+
     private App() {
         super(GAME_NAME);
     }

@@ -22,7 +22,22 @@ public abstract class MovingSprite extends Sprite {
     }
 
     public enum Directions {
-        UP, DOWN, LEFT, RIGHT
+        UP, DOWN, LEFT, RIGHT, UNKNOWN;
+
+        public static Directions negate(Directions dir) {
+            switch (dir) {
+                case UP:
+                    return DOWN;
+                case DOWN:
+                    return UP;
+                case LEFT:
+                    return RIGHT;
+                case RIGHT:
+                    return LEFT;
+                default:
+                    return UNKNOWN;
+            }
+        }
     }
 
     /**
@@ -45,6 +60,7 @@ public abstract class MovingSprite extends Sprite {
     }
 
     public void setDir(Directions dir) {
+
         switch (dir) {
             case UP:
                 vertical = -1;
@@ -63,6 +79,37 @@ public abstract class MovingSprite extends Sprite {
     }
 
 
+    public Directions getDir() {
+
+        Directions returnable = Directions.UNKNOWN;
+
+        switch (vertical) {
+            case -1:
+                returnable = horizontal == 0 ? Directions.UP : Directions.UNKNOWN;
+                break;
+            case 0:
+                switch (horizontal) {
+                    case -1:
+                        returnable = Directions.LEFT;
+                        break;
+                    case 1:
+                        returnable = Directions.RIGHT;
+                        break;
+                    default:
+                        returnable = Directions.UNKNOWN;
+                        break;
+                }
+                break;
+            case 1:
+                returnable = horizontal == 0 ? Directions.DOWN : Directions.UNKNOWN;
+                break;
+        }
+        return returnable;
+    }
+
+    protected void negateDir() {
+        this.setDir(Directions.negate(getDir()));
+    }
 
     /**
      * Displaces the Sprite with the amount of (dx, dy).

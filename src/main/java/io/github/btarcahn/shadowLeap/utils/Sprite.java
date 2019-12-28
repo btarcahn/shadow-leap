@@ -110,6 +110,11 @@ public abstract class Sprite
     @Override
     public boolean interacts(Interactable o) {
 
+        // an object must not interact with itself
+        if (o == this) {
+            return false;
+        }
+
         if (this.getClass() != o.getClass()) {
             return false;
         }
