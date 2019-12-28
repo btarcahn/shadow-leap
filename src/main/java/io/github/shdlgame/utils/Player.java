@@ -10,13 +10,6 @@ public class Player extends MovingSprite
 
     private int life = 3;
 
-    /**
-     * @return the number of lives of the Player.
-     */
-    public int lifeCount() {
-        return life;
-    }
-
     public void incLife() { life++; }
     public void decLife() { life--; }
 

@@ -71,9 +71,6 @@ public class App extends BasicGame {
         world.render(g);
     }
 
-    /** Start-up method. Creates the game and runs it.
-     * @param args Command-line arguments (ignored).
-     */
     public static void main(String[] args)
             throws SlickException {
         AppGameContainer app = new AppGameContainer(new App());

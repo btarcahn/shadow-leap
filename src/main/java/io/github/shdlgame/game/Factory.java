@@ -17,23 +17,25 @@ class Factory {
     private static final String BIKE = "assets/bike.png";
     private static final String FINISH = "assets/matt.jpg";
 
-    static Player createPlayer(float init_x, float init_y) {
-        return new Player(PLAYER, init_x, init_y);
+    static Player createPlayer() {
+        return new Player(PLAYER, 400.0f, 576.0f);
     }
 
-    static Sprite createWater(float init_x, float init_y) {
-        return new Sprite(WATER, init_x, init_y) {
+    static Sprite createWater() {
+        return new Sprite(WATER, 480.0f, 480.0f) {
 
             @Override
             public void reaction(Interactable obj) {
-                // kills player
+                if (obj instanceof Player) {
+                    ((Player) obj).decLife();
+                }
             }
         };
     }
 
-    static MovingSprite createBike(float init_x, float init_y) {
+    static MovingSprite createBike() {
 
-        MovingSprite bike = new MovingSprite(BIKE, init_x, init_y) {
+        MovingSprite bike = new MovingSprite(BIKE, 480.0f, 480.0f) {
 
             @Override
             public void onBorder() {

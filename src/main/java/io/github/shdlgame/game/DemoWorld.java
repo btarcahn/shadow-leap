@@ -17,11 +17,11 @@ public final class DemoWorld {
     List<Controllable> controllables = new ArrayList<>();
 
     public DemoWorld() {
-        Player player = Factory.createPlayer(400, 576);
-        MovingSprite bike = Factory.createBike(480, 480);
+        Player player = Factory.createPlayer();
+        MovingSprite bike = Factory.createBike();
         renderables.add(player);
         controllables.add(player);
-        renderables.add(Factory.createWater(480, 480));
+        renderables.add(Factory.createWater());
         movingSprites.add(bike);
         renderables.add(bike);
 
