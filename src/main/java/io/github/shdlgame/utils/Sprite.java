@@ -1,4 +1,4 @@
-package io.github.btarcahn.shadowLeap.utils;
+package io.github.shdlgame.utils;
 
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;

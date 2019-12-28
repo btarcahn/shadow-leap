@@ -1,4 +1,4 @@
-package io.github.btarcahn.shadowLeap.utils;
+package io.github.shdlgame.utils;
 
 /**
  * Objects implementing this functional interface

@@ -1,4 +1,4 @@
-package io.github.btarcahn.shadowLeap;
+package io.github.shdlgame;
 
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Input;

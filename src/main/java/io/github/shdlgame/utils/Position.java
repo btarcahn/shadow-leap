@@ -1,4 +1,4 @@
-package io.github.btarcahn.shadowLeap.utils;
+package io.github.shdlgame.utils;
 
 import java.util.ArrayList;
 import java.util.List;

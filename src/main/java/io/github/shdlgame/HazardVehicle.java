@@ -1,4 +1,4 @@
-package io.github.btarcahn.shadowLeap;
+package io.github.shdlgame;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -22,7 +22,7 @@ public class HazardVehicle extends MovingSprite {
 	
 	/** Default tag of the HazardVehicle.
 	 * HazardVehicle always has the "hazard" tag on it, this allows it to kill the Player when in contact.*/
-	public static final ArrayList<String> DEFAULT_TAG = new ArrayList<String>(Arrays.asList(Sprite.HAZARD));
+	public static final ArrayList<String> DEFAULT_TAG = new ArrayList<String>(Arrays.asList(HAZARD));
 	
 	/**Constructor for the HazardVehicle.
 	 * By default, this constructor automatically add the "hazard" tag to the HazardVehicle.

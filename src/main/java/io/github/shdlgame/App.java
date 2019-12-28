@@ -1,4 +1,4 @@
-package io.github.btarcahn.shadowLeap;
+package io.github.shdlgame;
 
 /**
  * 
@@ -9,7 +9,7 @@ package io.github.btarcahn.shadowLeap;
  */
 
 
-import io.github.btarcahn.shadowLeap.game.DemoWorld;
+import io.github.shdlgame.game.DemoWorld;
 import org.newdawn.slick.*;
 
 import java.io.File;

@@ -1,6 +1,6 @@
-package io.github.btarcahn.shadowLeap.game;
+package io.github.shdlgame.game;
 
-import io.github.btarcahn.shadowLeap.utils.*;
+import io.github.shdlgame.utils.*;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 

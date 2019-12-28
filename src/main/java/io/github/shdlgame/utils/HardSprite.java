@@ -1,4 +1,4 @@
-package io.github.btarcahn.shadowLeap.utils;
+package io.github.shdlgame.utils;
 
 /**
  * Motionless Sprite that make other movable Sprites

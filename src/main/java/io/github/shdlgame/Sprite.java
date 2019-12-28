@@ -1,6 +1,6 @@
-package io.github.btarcahn.shadowLeap;
+package io.github.shdlgame;
 
-import io.github.btarcahn.shadowLeap.utils.BoundingBox;
+import io.github.shdlgame.utils.BoundingBox;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.Input;
 import org.newdawn.slick.SlickException;

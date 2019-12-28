@@ -1,4 +1,4 @@
-package io.github.btarcahn.shadowLeap;
+package io.github.shdlgame;
 
 import org.newdawn.slick.Input;
 
@@ -194,8 +194,8 @@ public class Player extends MovingSprite {
 	public void onCollision(Sprite other) {
 		
 		// I will be dead when I got hit by a hazard stuff and I'm not riding anything
-		if ((other.hasTag(Sprite.HAZARD) && !protection) ||
-				(other.hasTag(Sprite.PUSHY) && !this.onScreen(getX() + (((MovingSprite) other).isMoveRight() ? 1 : -1), getY()))){
+		if ((other.hasTag(HAZARD) && !protection) ||
+				(other.hasTag(PUSHY) && !this.onScreen(getX() + (((MovingSprite) other).isMoveRight() ? 1 : -1), getY()))){
 			this.die();
 		}
 		

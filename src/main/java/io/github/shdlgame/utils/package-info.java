@@ -4,4 +4,4 @@
  * @author Bach Tran
  * @since 2.0
  */
-package io.github.btarcahn.shadowLeap.utils;
+package io.github.shdlgame.utils;

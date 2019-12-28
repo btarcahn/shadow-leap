@@ -1,9 +1,9 @@
-package io.github.btarcahn.shadowLeap.game;
+package io.github.shdlgame.game;
 
-import io.github.btarcahn.shadowLeap.utils.Interactable;
-import io.github.btarcahn.shadowLeap.utils.MovingSprite;
-import io.github.btarcahn.shadowLeap.utils.Player;
-import io.github.btarcahn.shadowLeap.utils.Sprite;
+import io.github.shdlgame.utils.Interactable;
+import io.github.shdlgame.utils.MovingSprite;
+import io.github.shdlgame.utils.Player;
+import io.github.shdlgame.utils.Sprite;
 
 /**
  * Static methods, creating Sprites for the game.
