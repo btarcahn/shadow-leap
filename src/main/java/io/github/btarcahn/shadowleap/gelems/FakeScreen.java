@@ -2,22 +2,32 @@ package io.github.btarcahn.shadowleap.gelems;
 
 
 public final class FakeScreen implements Collidable {
-    private int width;
-    private int height;
+    private final int width;
+    private final int height;
 
-    private FakeScreen singleInstance;
-    private boolean created = false;
+    private int lifeCount = 3;
+
+    private static FakeScreen singleInstance;
+    private static boolean created = false;
 
     private FakeScreen(int width, int height) {
         this.width = width;
         this.height = height;
     }
 
-    public FakeScreen getScreen(int width, int height) {
+    public static FakeScreen getScreen(int width, int height) {
         if (!created) {
             singleInstance = new FakeScreen(width, height);
+            created = true;
         }
         return singleInstance;
+    }
+
+    public void increaseLife() {
+        lifeCount++;
+    }
+    public void decreaseLife() {
+        lifeCount--;
     }
 
     public int getWidth() {
@@ -43,7 +53,7 @@ public final class FakeScreen implements Collidable {
 
     @Override
     public void onCollision() {
-
+        // screen does nothing
     }
 
     @Override

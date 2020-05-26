@@ -2,13 +2,13 @@ package io.github.btarcahn.shadowleap.gelems;
 
 import org.newdawn.slick.Input;
 
-public abstract class MovingSprite extends Sprite {
+public class MovingSprite extends Sprite {
 
     private float speed;
     private Direction direction;
 
-    public MovingSprite(String pathToImg, float x, float y) {
-        super(pathToImg, x, y);
+    public MovingSprite(String pathToImg, float x, float y, FakeScreen screen)  {
+        super(pathToImg, x, y, screen);
     }
 
     public void setSpeed(float speed) {
@@ -44,5 +44,15 @@ public abstract class MovingSprite extends Sprite {
 
     private void moveVertically(float speed, int delta) {
         this.setY(this.getY() + speed * delta);
+    }
+
+    @Override
+    public void onCollision() {
+
+    }
+
+    @Override
+    public void onCollision(Collidable other) {
+
     }
 }

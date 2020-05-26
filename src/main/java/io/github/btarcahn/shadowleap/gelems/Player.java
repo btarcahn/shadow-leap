@@ -4,20 +4,34 @@ import org.newdawn.slick.Input;
 
 public class Player extends Sprite {
 
-
-    public Player(String pathToImg, float x, float y) {
-        super(pathToImg, x, y);
+    public Player(String pathToImg, float x, float y, FakeScreen screen) {
+        super(pathToImg, x, y, screen);
     }
 
     @Override
     public void setX(float x) {
-        super.setX(x);
+        try {
+           Player fake = (Player) this.clone();
+           fake.setX(x);
+           if (fake.onscreen()) {
+               super.setX(x);
+           }
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void setY(float y) {
-
-        super.setY(y);
+        try {
+            Player fake = (Player) this.clone();
+            fake.setY(y);
+            if (fake.onscreen()) {
+                super.setY(y);
+            }
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

@@ -1,6 +1,5 @@
 package io.github.btarcahn.shadowleap.gelems;
 
-import io.github.btarcahn.shadowleap.App;
 import io.github.btarcahn.shadowleap.utilities.BoundingBox;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
@@ -8,14 +7,15 @@ import org.newdawn.slick.SlickException;
 import java.util.HashSet;
 import java.util.Set;
 
-public abstract class Sprite implements Collidable, Renderable {
+public abstract class Sprite implements Collidable, Renderable, Cloneable {
     private BoundingBox boundingBox;
     private Image image;
+    FakeScreen screen;
     private float x;
     private float y;
     private Set<String> tags = new HashSet<>();
 
-    public Sprite(String pathToImg, float x, float y) {
+    public Sprite(String pathToImg, float x, float y, FakeScreen screen) {
 
         // initialize the image from source
         try {
@@ -27,6 +27,7 @@ public abstract class Sprite implements Collidable, Renderable {
         // sets coordinates & bounding box
         this.x = x;
         this.y = y;
+        this.screen = screen;
         boundingBox = new BoundingBox(this.image, this.x, this.y);
     }
 
@@ -57,10 +58,10 @@ public abstract class Sprite implements Collidable, Renderable {
     }
 
     @Override
-    public boolean onscreen(FakeScreen screen) {
-        return !(x + getWidth() / 2 > screen.getWidth()
+    public boolean onscreen() {
+        return !(x + getWidth() / 2 > this.screen.getWidth()
                 || x - getWidth() / 2 < 0
-                || y + getHeight() / 2 > screen.getHeight()
+                || y + getHeight() / 2 > this.screen.getHeight()
                 || y - getHeight() / 2 < 0);
     }
 
