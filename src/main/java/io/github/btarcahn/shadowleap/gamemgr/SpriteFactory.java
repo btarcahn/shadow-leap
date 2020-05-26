@@ -13,6 +13,8 @@ public class SpriteFactory {
     private static final String PATH_LONGLOG = "assets/longlog.png";
     private static final String PATH_TURTLE = "assets/turtle.png";
     private static final String PATH_LIFE_REMAINING = "assets/lives.png";
+    private static final String PATH_FROG = "assets/frog.png";
+    private static final String PATH_TREE = "assets/tree.png";
 
     private static final float SPEED_BIKE = 0.2f;
     private static final float SPEED_RACECAR = 0.5f;
@@ -32,8 +34,16 @@ public class SpriteFactory {
         return new Sprite(PATH_GRASS, x, y, screen);
     }
 
+    Renderable createTree(int x, int y) {
+        return new Sprite(PATH_TREE, x, y, screen);
+    }
+
     Renderable createLifeRemaining(int x, int y) {
         return new Sprite(PATH_LIFE_REMAINING, x, y, screen);
+    }
+
+    Collidable createPlayer(int x, int y) {
+        return new Player(PATH_FROG, x, y, screen);
     }
 
     Collidable createWater(int x, int y) {

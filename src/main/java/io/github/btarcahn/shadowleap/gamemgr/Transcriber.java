@@ -52,44 +52,62 @@ public final class Transcriber {
                 switch (information[0]) {
 
                     case "water":
-                        collidables.add(factory.createWater(x, y));
+                        Collidable water = factory.createWater(x, y);
+                        collidables.add(water);
+                        renderables.add((Renderable) water);
                         break;
 
                     case "grass":
-                        renderables.add(factory.createGrass(x, y));
+                        Renderable grass = factory.createGrass(x, y);
+                        renderables.add(grass);
                         break;
 
                     case "tree":
-                        // TODO add trees
+                        Renderable tree = factory.createTree(x, y);
+                        renderables.add(tree);
                         break;
 
                     case "bus":
-                        collidables.add(factory.createBus(speedSign, x, y));
+                        Collidable bus = factory.createBus(speedSign, x, y);
+                        collidables.add(bus);
+                        renderables.add((Renderable) bus);
                         break;
 
                     case "bike":
                         // note: the bike hasn't reached the border yet
-                        collidables.add(factory.createMotorbike(speedSign, x, y));
+                        Collidable motorbike = factory.createMotorbike(speedSign, x, y);
+                        collidables.add(motorbike);
+                        renderables.add((Renderable) motorbike);
                         break;
 
                     case "racecar":
-                        collidables.add(factory.createRacecar(speedSign, x, y));
+                        Collidable racecar = factory.createRacecar(speedSign, x, y);
+                        collidables.add(racecar);
+                        renderables.add((Renderable) racecar);
                         break;
 
                     case "bulldozer":
-                        collidables.add(factory.createBulldozer(speedSign, x, y));
+                        Collidable bulldozer = factory.createBulldozer(speedSign, x, y);
+                        collidables.add(bulldozer);
+                        renderables.add((Renderable) bulldozer);
                         break;
 
                     case "log":
-                        collidables.add(factory.createLog(speedSign, x, y));
+                        Collidable log = factory.createLog(speedSign, x, y);
+                        collidables.add(log);
+                        renderables.add((Renderable) log);
                         break;
 
                     case "longLog":
-                        collidables.add(factory.createLonglog(speedSign, x, y));
+                        Collidable longlog = factory.createLonglog(speedSign, x, y);
+                        collidables.add(longlog);
+                        renderables.add((Renderable) longlog);
                         break;
 
                     case "turtle":
-                        collidables.add(factory.createTurtle(speedSign, x, y));
+                        Collidable turtle = factory.createTurtle(speedSign, x, y);
+                        collidables.add(turtle);
+                        renderables.add((Renderable) turtle);
                         break;
 
                 }
