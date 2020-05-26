@@ -4,6 +4,9 @@ import org.newdawn.slick.Input;
 
 public class Player extends Sprite {
 
+    private float speed;
+
+
     public Player(String pathToImg, float x, float y, FakeScreen screen) {
         super(pathToImg, x, y, screen);
     }
@@ -32,6 +35,10 @@ public class Player extends Sprite {
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
+    }
+
+    public void setSpeed(float speed) {
+        this.speed = speed;
     }
 
     @Override

@@ -7,7 +7,7 @@ import org.newdawn.slick.SlickException;
 import java.util.HashSet;
 import java.util.Set;
 
-public abstract class Sprite implements Collidable, Renderable, Cloneable {
+public class Sprite implements Collidable, Renderable, Cloneable {
     private BoundingBox boundingBox;
     private Image image;
     FakeScreen screen;
@@ -77,6 +77,17 @@ public abstract class Sprite implements Collidable, Renderable, Cloneable {
             return this.boundingBox.intersects(((Sprite) other).boundingBox);
         }
         return false;
+    }
+
+    // TODO check if abstracting these 2 methods are crucial
+    @Override
+    public void onCollision() {
+        // do nothing
+    }
+
+    @Override
+    public void onCollision(Collidable other) {
+        // do nothing
     }
 
     public boolean addTag(String tag) {
