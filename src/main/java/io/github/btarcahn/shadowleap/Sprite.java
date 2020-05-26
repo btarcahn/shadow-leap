@@ -1,6 +1,6 @@
-package io.github.btarcahn.shadowLeap;
+package io.github.btarcahn.shadowleap;
 
-import io.github.btarcahn.shadowLeap.utilities.BoundingBox;
+import io.github.btarcahn.shadowleap.utilities.BoundingBox;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.Input;
 import org.newdawn.slick.SlickException;

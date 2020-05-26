@@ -10,7 +10,7 @@ plugins {
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 version = '1.0'
-mainClassName = 'io.github.btarcahn.shadowLeap.App'
+mainClassName = 'io.github.btarcahn.shadowleap.App'
 
 repositories {
     // Use jcenter for resolving your dependencies.

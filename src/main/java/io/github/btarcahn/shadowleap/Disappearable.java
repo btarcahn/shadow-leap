@@ -1,4 +1,4 @@
-package io.github.btarcahn.shadowLeap;
+package io.github.btarcahn.shadowleap;
 
 /**Interface that given a Sprite an ability to disappear.
  * @author Bach Tran

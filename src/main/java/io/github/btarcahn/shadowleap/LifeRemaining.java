@@ -1,6 +1,4 @@
-package io.github.btarcahn.shadowLeap;
-
-import io.github.btarcahn.shadowLeap.Sprite;
+package io.github.btarcahn.shadowleap;
 
 import java.util.ArrayList;
 
