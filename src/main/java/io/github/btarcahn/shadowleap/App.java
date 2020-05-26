@@ -9,6 +9,7 @@ package io.github.btarcahn.shadowleap;
  */
 
 
+import io.github.btarcahn.shadowleap.gamemgr.WorldInitializer;
 import org.newdawn.slick.*;
 
 import java.io.File;
@@ -26,6 +27,7 @@ public class App extends BasicGame {
     public static final int PLAYER_LIVES = 3;
     
     private World world;
+    private WorldInitializer newWorld;
     String[] levels = new File("assets/levels").list();
     private int currentLevel = 0;
     
@@ -40,6 +42,7 @@ public class App extends BasicGame {
     public void init(GameContainer gc)
             throws SlickException {
         world = new World("assets/levels/" + levels[currentLevel]);
+        newWorld = new WorldInitializer();
     }
 
     /** Update the game state for a frame.
@@ -51,16 +54,17 @@ public class App extends BasicGame {
             throws SlickException {
         // Get data about the current input (keyboard state).
         Input input = gc.getInput();
-        if (world.isNextWorld()) {
-        	if (currentLevel < levels.length - 1) {
-	        	world = new World("assets/levels/" + levels[++currentLevel]);
-	        	world.setNextWorld(false);
-        	} else {
-        		// congrats, you win
-        		System.exit(0);
-        	}
-        } 
-        world.update(input, delta);
+//        if (world.isNextWorld()) {
+//        	if (currentLevel < levels.length - 1) {
+//	        	world = new World("assets/levels/" + levels[++currentLevel]);
+//	        	world.setNextWorld(false);
+//        	} else {
+//        		// congrats, you win
+//        		System.exit(0);
+//        	}
+//        }
+//        world.update(input, delta);
+        newWorld.update(input, delta);
     }
 
     /** Render the entire screen, so it reflects the current game state.
@@ -69,7 +73,8 @@ public class App extends BasicGame {
      */
     public void render(GameContainer gc, Graphics g)
             throws SlickException {
-        world.render(g);
+//        world.render(g);
+        newWorld.render(g);
     }
 
     /** Start-up method. Creates the game and runs it.

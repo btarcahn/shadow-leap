@@ -3,6 +3,7 @@ package io.github.btarcahn.shadowleap.gamemgr;
 import io.github.btarcahn.shadowleap.*;
 import io.github.btarcahn.shadowleap.gelems.Collidable;
 import io.github.btarcahn.shadowleap.gelems.FakeScreen;
+import io.github.btarcahn.shadowleap.gelems.MovingSprite;
 import io.github.btarcahn.shadowleap.gelems.Renderable;
 
 import java.io.BufferedReader;
@@ -54,7 +55,7 @@ public final class Transcriber {
                     case "water":
                         Collidable water = factory.createWater(x, y);
                         collidables.add(water);
-                        renderables.add((Renderable) water);
+//                        renderables.add((MovingSprite) water);
                         break;
 
                     case "grass":
@@ -70,44 +71,44 @@ public final class Transcriber {
                     case "bus":
                         Collidable bus = factory.createBus(speedSign, x, y);
                         collidables.add(bus);
-                        renderables.add((Renderable) bus);
+//                        renderables.add((MovingSprite) bus);
                         break;
 
                     case "bike":
                         // note: the bike hasn't reached the border yet
                         Collidable motorbike = factory.createMotorbike(speedSign, x, y);
                         collidables.add(motorbike);
-                        renderables.add((Renderable) motorbike);
+//                        renderables.add((MovingSprite) motorbike);
                         break;
 
                     case "racecar":
                         Collidable racecar = factory.createRacecar(speedSign, x, y);
                         collidables.add(racecar);
-                        renderables.add((Renderable) racecar);
+//                        renderables.add((MovingSprite) racecar);
                         break;
 
                     case "bulldozer":
                         Collidable bulldozer = factory.createBulldozer(speedSign, x, y);
                         collidables.add(bulldozer);
-                        renderables.add((Renderable) bulldozer);
+//                        renderables.add((MovingSprite) bulldozer);
                         break;
 
                     case "log":
                         Collidable log = factory.createLog(speedSign, x, y);
                         collidables.add(log);
-                        renderables.add((Renderable) log);
+//                        renderables.add((MovingSprite) log);
                         break;
 
                     case "longLog":
                         Collidable longlog = factory.createLonglog(speedSign, x, y);
                         collidables.add(longlog);
-                        renderables.add((Renderable) longlog);
+//                        renderables.add((MovingSprite) longlog);
                         break;
 
                     case "turtle":
                         Collidable turtle = factory.createTurtle(speedSign, x, y);
                         collidables.add(turtle);
-                        renderables.add((Renderable) turtle);
+//                        renderables.add((MovingSprite) turtle);
                         break;
 
                 }

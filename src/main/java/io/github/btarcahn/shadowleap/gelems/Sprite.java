@@ -67,7 +67,7 @@ public class Sprite implements Collidable, Renderable, Cloneable {
 
     @Override
     public boolean canRender() {
-        return this.hasTag("disappear");
+        return !this.hasTag("disappear");
     }
 
     @Override

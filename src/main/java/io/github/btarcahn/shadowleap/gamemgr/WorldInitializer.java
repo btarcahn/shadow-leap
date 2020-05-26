@@ -1,6 +1,7 @@
 package io.github.btarcahn.shadowleap.gamemgr;
 
 import io.github.btarcahn.shadowleap.gelems.*;
+import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Input;
 
 import java.io.File;
@@ -11,12 +12,13 @@ public class WorldInitializer {
 
     private final FakeScreen screen = FakeScreen.getScreen(1024, 768);
 
-    private Transcriber transcriber = new Transcriber(paths[0], screen);
+    private Transcriber transcriber = new Transcriber("assets/levels/" + paths[0], screen);
 
     private List<Renderable> renderables;
     private List<Collidable> collidables;
 
     public WorldInitializer() {
+        transcriber.interpretFile();
         renderables = this.transcriber.getRenderables();
         collidables = this.transcriber.getCollidables();
     }
@@ -31,10 +33,10 @@ public class WorldInitializer {
                 .forEach(sprite -> ((MovingSprite) sprite).update(input, delta));
     }
 
-    public void render() {
+    public void render(Graphics g) {
         renderables.stream()
-                .filter(Renderable::onscreen)
-                .filter(Renderable::canRender)
+//                .filter(Renderable::onscreen)
+//                .filter(Renderable::canRender)
                 .forEach(Renderable::render);
     }
 
