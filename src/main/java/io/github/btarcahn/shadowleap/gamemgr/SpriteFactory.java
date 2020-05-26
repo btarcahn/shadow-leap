@@ -11,6 +11,8 @@ public class SpriteFactory {
     private static final String PATH_BULLDOZER = "assets/bulldozer.png";
     private static final String PATH_LOG = "assets/log.png";
     private static final String PATH_LONGLOG = "assets/longlog.png";
+    private static final String PATH_TURTLE = "assets/turtle.png";
+    private static final String PATH_LIFE_REMAINING = "assets/lives.png";
 
     private static final float SPEED_BIKE = 0.2f;
     private static final float SPEED_RACECAR = 0.5f;
@@ -18,6 +20,7 @@ public class SpriteFactory {
     private static final float SPEED_BULLDOZER = 0.05f;
     private static final float SPEED_LOG = 0.1f;
     private static final float SPEED_LONGLOG = 0.07f;
+    private static final float SPEED_TURTLE = 0.085f;
 
     private FakeScreen screen;
 
@@ -27,6 +30,10 @@ public class SpriteFactory {
 
     Renderable createGrass(int x, int y) {
         return new Sprite(PATH_GRASS, x, y, screen);
+    }
+
+    Renderable createLifeRemaining(int x, int y) {
+        return new Sprite(PATH_LIFE_REMAINING, x, y, screen);
     }
 
     Collidable createWater(int x, int y) {
@@ -81,6 +88,14 @@ public class SpriteFactory {
         longlog.setSpeed(speedSign * SPEED_LONGLOG);
 
         return new RideableDecorator(longlog);
+    }
+
+    Collidable createTurtle(float speedSign, int x, int y) {
+        MovingSprite turtle = new MovingSprite(PATH_TURTLE, x, y, screen);
+        turtle.setDirection(Direction.HORIZONTAL);
+        turtle.setSpeed(speedSign * SPEED_TURTLE);
+
+        return new RideableDecorator(turtle);
     }
 
 }

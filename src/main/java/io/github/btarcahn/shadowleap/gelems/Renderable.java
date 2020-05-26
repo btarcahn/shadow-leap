@@ -7,6 +7,8 @@ public interface Renderable {
      */
     boolean onscreen();
 
+    boolean canRender();
+
     /**
      * Renders the element on the screen
      */

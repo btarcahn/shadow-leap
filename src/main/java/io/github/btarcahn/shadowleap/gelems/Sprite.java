@@ -66,6 +66,11 @@ public class Sprite implements Collidable, Renderable, Cloneable {
     }
 
     @Override
+    public boolean canRender() {
+        return this.hasTag("disappear");
+    }
+
+    @Override
     public final void render() {
         this.image.drawCentered(this.x, this.y);
     }
